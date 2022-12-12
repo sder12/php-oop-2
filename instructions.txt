@@ -13,3 +13,10 @@ BONUS (Opzionale):
  Il **cliente** potrà sia comprare i prodotti come ospite, senza registrarsi nello store, oppure puó iscriversi e creare un **account** per ricevere cosi il 20% di sconto.
  Il cliente effettua il pagamento dei prodotti nel **carrello** con la **carta di credito**, che non deve essere scaduta.
  Fare refactoring
+
+
+
+ cliente
+ account 20%
+ carrello
+ CARTA DI CREDITO non deve essere scaduta 

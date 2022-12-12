@@ -10,6 +10,6 @@ class Food extends Product
     {
         parent::__construct($name, $price, $img, $category);
         $this->ingredient = $ingredient;
-        $this->animal_size = $size;
+        $this->size = $size;
     }
 }
