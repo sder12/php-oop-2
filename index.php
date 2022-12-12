@@ -6,18 +6,18 @@ require_once __DIR__ . "/Models/Game.php";
 require_once __DIR__ . "/Models/Sleep.php";
 
 //PRODUCT DEFAULT
-$prod = new Product("gioco", 23, new Category("Cani"));
+$prod = new Product("gioco", 23,  "https://www.foodpet.it/wp-content/uploads/2018/03/secco.jpg", new Category("Cani"));
 // var_dump($prod);
 
 
 //PRODUCT
-$catfood = new Food("crocchette", 12, new Category("Gatti"), "pollo", "kitten");
+$catfood = new Food("crocchette", 12, "https://www.foodpet.it/wp-content/uploads/2018/03/secco.jpg", new Category("Gatti"), "pollo", "kitten");
 // var_dump($food);
 
-$ball = new Game("palla", 5, new Category("Cani"), "rossa", "antistress");
+$ball = new Game("palla", 5,  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzBPcWNoSKDd7x6iEXWQL9PA2ShbF1MlxZvw&usqp=CAU", new Category("Cani"), "rossa", "antistress");
 // var_dump($game);
 
-$dogbed = new Sleep("cuccia", 24, new Category("Cani"), "large", "cotton");
+$dogbed = new Sleep("cuccia", 24,  "https://i.ebayimg.com/images/g/VtQAAOSwWGJbdm2Y/s-l500.jpg", new Category("Cani"), "large", "cotton");
 // var_dump($bed);
 
 $products = [
@@ -57,13 +57,22 @@ $products = [
                 <?php foreach ($products as $prod) { ?>
                     <div class="col">
                         <div class="card">
-                            <!-- <img src="<?php echo $movie->poster; ?>" class="card-img-top" alt="..."> -->
+                            <!-- IMAGE -->
+                            <img src="<?php echo $prod->img; ?>" class="card-img-top" alt="...">
                             <div class="card-body">
+                                <!-- NAME PROD -->
                                 <h6 class="text-uppercase"><?php echo $prod->name; ?></h6>
-                                <p class="card-text">
-                                    <?php echo $prod->category->category ?>
-                                </p>
-
+                                <!-- CATEGORY: Cani/Gatti -->
+                                <?php if ($prod->category->category ==  "Cani") { ?>
+                                    <p class="card-text">
+                                        Cani
+                                    </p>
+                                <?php } else { ?>
+                                    <p class="card-text bg-dark text-white">
+                                        Gatti
+                                    </p>
+                                <?php } ?>
+                                <!-- PRICE -->
                                 <p class="card-text">
                                     Price: <?php echo $prod->price ?> €
                                 </p>
