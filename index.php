@@ -59,24 +59,25 @@ $products = [
                         <div class="card">
                             <!-- IMAGE -->
                             <img src="<?php echo $prod->img; ?>" class="card-img-top" alt="...">
-                            <div class="card-body">
+                            <div class="card-body text-center">
                                 <!-- NAME PROD -->
-                                <h6 class="text-uppercase"><?php echo $prod->name; ?></h6>
+                                <h5 class="text-uppercase"><?php echo $prod->name; ?></h5>
                                 <!-- CATEGORY: Cani/Gatti -->
-                                <?php if ($prod->category->category ==  "Cani") { ?>
-                                    <p class="card-text">
-                                        Cani
-                                    </p>
-                                <?php } else { ?>
-                                    <p class="card-text bg-dark text-white">
-                                        Gatti
-                                    </p>
-                                <?php } ?>
+
                                 <!-- PRICE -->
-                                <p class="card-text">
+                                <p class="card-text bg-secondary text-white py-3">
                                     Price: <?php echo $prod->price ?> €
                                 </p>
                             </div>
+
+                            <div class="bg-light text-center">
+                                <?php if ($prod->category->category ==  "Cani") { ?>
+                                    <img src="Images/dog.png" class="card-img-top w-25 my-2  " alt="">
+                                <?php } else { ?>
+                                    <img src="Images/cat.png" class="card-img-top w-25 my-2  " alt="">
+                                <?php } ?>
+                            </div>
+
                         </div>
                     </div>
                 <?php } ?>
