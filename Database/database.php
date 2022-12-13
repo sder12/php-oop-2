@@ -1,4 +1,10 @@
 <?php
+//Classi product
+require_once __DIR__ . "/../Models/Category.php";
+require_once __DIR__ . "/../Models/Product.php";
+require_once __DIR__ . "/../Models/Food.php";
+require_once __DIR__ . "/../Models/Game.php";
+require_once __DIR__ . "/../Models/Sleep.php";
 
 //PRODUCT DEFAULT
 $prod = new Product("gioco", 23,  "https://www.foodpet.it/wp-content/uploads/2018/03/secco.jpg", new Category("Cani"));

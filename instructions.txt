@@ -16,7 +16,10 @@ BONUS (Opzionale):
 
 
 
- cliente
- account 20%
- carrello
- CARTA DI CREDITO non deve essere scaduta 
+ Customer ->cliente 
+ Account ->account 20%
+ ShoppingBasket -> carrello
+ CreditCard -> CARTA DI CREDITO non deve essere scaduta 
+
+
+ RICORDO COMMENTI CLASSI / FUNZIONI
